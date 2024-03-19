@@ -1,0 +1,11 @@
+com/example/nd_telemedicine_app/repository/UserRepository.class
+com/example/nd_telemedicine_app/model/PatientHealthInfo.class
+com/example/nd_telemedicine_app/model/Role.class
+com/example/nd_telemedicine_app/repository/PatientHealthInfoRepository.class
+com/example/nd_telemedicine_app/model/RoleConverter.class
+com/example/nd_telemedicine_app/NdTelemedicineAppApplication.class
+com/example/nd_telemedicine_app/controller/UserController.class
+com/example/nd_telemedicine_app/service/UserService.class
+com/example/nd_telemedicine_app/model/User.class
+com/example/nd_telemedicine_app/service/HealthInformationService.class
+com/example/nd_telemedicine_app/controller/PatientHealthInfoController.class

@@ -1,0 +1,13 @@
+#server:
+#  port: 9000
+#
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#      #Route mapping
+#      - id: registrationMicroservice #Route identifier
+#        uri: http://localhost:9002/ #Respective microservice URL which needs to be mapped
+#        predicates:
+#          - Path=/ndTelemedicine/register** # Request context path mapping
+#          -

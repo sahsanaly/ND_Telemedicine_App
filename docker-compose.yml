@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    platform: linux/x86_64
+    image: mysql:8.0.30
+    restart: unless-stopped
+    #    env_file: ./.env
+    environment:
+      - MYSQL_DATABASE=userServices
+      - MYSQL_USER=binchickens
+      - MYSQL_PASSWORD=Password01!
+      - MYSQL_ROOT_PASSWORD=B4l0n3y!
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/var/lib/mysql
+  user_app:
+    depends_on:
+      - mysqldb
+    image: ndt:latest
+    restart: on-failure
+    #    env_file: ./.env
+    ports:
+      - 8080:8080
+    stdin_open: true
+    tty: true
+  booking_app:
+    depends_on:
+      - mysqldb
+    image: booking:latest
+    restart: on-failure
+    #    env_file: ./.env
+    ports:
+      - 9000:9000
+    stdin_open: true
+    tty: true
+volumes:
+  db:
